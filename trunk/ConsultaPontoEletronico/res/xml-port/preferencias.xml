@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Matrícula" android:key="matricula">
+        
+        <EditTextPreference android:key="teste_matricula"
+            android:title="Matricula"
+            android:dialogTitle="Matricula"
+            android:dialogMessage="Informe a matrícula"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
