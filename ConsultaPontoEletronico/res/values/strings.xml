@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Consultar Ponto Eletrônico</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_consulta_ponto">Consultar Ponto Eletrônico</string>
+    <string name="informe_matricula">Informe a sua matrícula..</string>
+    <string name="informe_setor">Informe o seu setor..</string>
+    <string name="informe_senha">Informe a sua senha..</string>
+    <string name="bt_consultar">Consultar</string>
+    <string name="title_activity_resultado_consulta_ponto">Resultado da Consulta do Ponto Eletrônico</string>
+    <string name="ckx_salvar_preferencia">Salvar em Preferências</string>
+
+</resources>
