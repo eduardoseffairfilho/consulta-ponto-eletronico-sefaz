@@ -1,8 +1,10 @@
 package br.com.eseffair.consultapontoeletronico;
 
+import java.text.DateFormatSymbols;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import android.app.Activity;
@@ -33,10 +35,8 @@ public class ConsultaPontoActivity extends Activity {
         setContentView(R.layout.activity_consulta_ponto);
         
         /** Monta o Combobox dos Meses. */
-        final String[] meses = new String[] {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
         Spinner spMes = (Spinner) this.findViewById(R.id.spMes);
-        ArrayAdapter<String> adapterMes = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, meses);
-        adapterMes.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapterMes = montaComboboxMes();
         spMes.setAdapter(adapterMes);
         
         /** Monta o Combobox dos Anos. */
@@ -86,6 +86,13 @@ public class ConsultaPontoActivity extends Activity {
 			}
 		});
     }
+
+	protected ArrayAdapter<String> montaComboboxMes() {
+		final String[] meses = new DateFormatSymbols(new Locale("pt_BR")).getMonths();
+        ArrayAdapter<String> adapterMes = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, meses);
+        adapterMes.setDropDownViewResource(android.R.layout.simple_spinner_item);
+		return adapterMes;
+	}
 
 	protected ArrayAdapter<Integer> montaComboboxAno() {
 		final Integer[] anos = new Integer[10];
@@ -146,18 +153,18 @@ public class ConsultaPontoActivity extends Activity {
 
 	protected String getSescrMes(String mesSelecionado) {
     	final Map<String,String> descrMes =  new HashMap<String, String>();
-        descrMes.put("Janeiro", "1");
-        descrMes.put("Fevereiro", "2");
-        descrMes.put("Março", "3");
-        descrMes.put("Abril", "4");
-        descrMes.put("Maio", "5");
-        descrMes.put("Junho", "6");
-        descrMes.put("Julho", "7");
-        descrMes.put("Agosto", "8");
-        descrMes.put("Setembro", "9");
-        descrMes.put("Outubro", "10");
-        descrMes.put("Novembro", "11");
-        descrMes.put("Dezembro", "12");
+        descrMes.put("janeiro", "1");
+        descrMes.put("fevereiro", "2");
+        descrMes.put("março", "3");
+        descrMes.put("abril", "4");
+        descrMes.put("maio", "5");
+        descrMes.put("junho", "6");
+        descrMes.put("julho", "7");
+        descrMes.put("agosto", "8");
+        descrMes.put("setembro", "9");
+        descrMes.put("outubro", "10");
+        descrMes.put("novembro", "11");
+        descrMes.put("dezembro", "12");
     	
     	return descrMes.get(mesSelecionado);
     }
