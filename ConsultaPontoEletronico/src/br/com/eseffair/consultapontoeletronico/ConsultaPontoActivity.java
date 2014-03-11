@@ -89,7 +89,18 @@ public class ConsultaPontoActivity extends Activity {
 
 	protected ArrayAdapter<String> montaComboboxMes() {
 		final String[] meses = new DateFormatSymbols(new Locale("pt_BR")).getMonths();
-        ArrayAdapter<String> adapterMes = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, meses);
+		final String[] mesesExibir = new String[12];
+		
+		int mesAtual = new GregorianCalendar().get(Calendar.MONTH);
+		for (int i = 0; i < mesesExibir.length; i++) {
+			if (mesAtual+i >= mesesExibir.length) {
+				mesesExibir[i] = meses[mesAtual+i - mesesExibir.length];
+			} else {
+				mesesExibir[i] = meses[mesAtual+i];
+			}
+		}
+		
+        ArrayAdapter<String> adapterMes = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mesesExibir);
         adapterMes.setDropDownViewResource(android.R.layout.simple_spinner_item);
 		return adapterMes;
 	}
