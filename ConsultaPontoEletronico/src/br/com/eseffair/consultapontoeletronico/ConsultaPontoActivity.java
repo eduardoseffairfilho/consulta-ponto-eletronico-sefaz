@@ -40,10 +40,8 @@ public class ConsultaPontoActivity extends Activity {
         spMes.setAdapter(adapterMes);
         
         /** Monta o Combobox dos Anos. */
-        final String[] anos = new String[] {"2014", "2013", "2012", "2011", "2010","2009", "2008", "2007"};
         Spinner spAno = (Spinner) this.findViewById(R.id.spAno);
-        ArrayAdapter<String> adapterAno = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, anos);
-        adapterAno.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        ArrayAdapter<Integer> adapterAno = montaComboboxAno();
         spAno.setAdapter(adapterAno);
         
         /** Carrega campos. */
@@ -72,7 +70,7 @@ public class ConsultaPontoActivity extends Activity {
 					String cpf = etCpf.getText().toString();
 					String mesSelecionado = (String) spMes.getSelectedItem();
 					String keyMesSelecionado = getSescrMes(mesSelecionado);
-					String anoSelecionado = (String) spAno.getSelectedItem();
+					String anoSelecionado = String.valueOf(spAno.getSelectedItem());
 					
 					String url = "http://online.sefaz.am.gov.br/pontoeletronico/ResultadoConsulta_oracle.asp" + 
 							"?matricula=" + matricula.toUpperCase() + 
@@ -88,6 +86,18 @@ public class ConsultaPontoActivity extends Activity {
 			}
 		});
     }
+
+	protected ArrayAdapter<Integer> montaComboboxAno() {
+		final Integer[] anos = new Integer[10];
+		anos[0] = new GregorianCalendar().get(Calendar.YEAR); // o primeiro ano é o ano atual.
+		// os demais anos são anteriores ao ano atual.
+		for (int i = 1; i < anos.length; i++) {
+			anos[i] = anos[i-1] - 1;
+		}
+        ArrayAdapter<Integer> adapterAno = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, anos);
+        adapterAno.setDropDownViewResource(android.R.layout.simple_spinner_item);
+		return adapterAno;
+	}
     
     protected void salvarCamposEmPreferencia() {
     	SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
