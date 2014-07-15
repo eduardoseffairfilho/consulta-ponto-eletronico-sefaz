@@ -12,12 +12,12 @@
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Dialog" 
+        android:theme="@android:style/Theme.Wallpaper" 
         android:configChanges="orientation" android:screenOrientation="portrait">
         <activity
             android:name=".ConsultaPontoActivity"
             android:label="@string/title_activity_consulta_ponto" 
-            android:configChanges="orientation" android:screenOrientation="portrait">
+            android:configChanges="orientation" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
