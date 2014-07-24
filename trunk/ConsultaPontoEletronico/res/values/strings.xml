@@ -9,5 +9,6 @@
     <string name="bt_consultar">Consultar</string>
     <string name="title_activity_resultado_consulta_ponto">Resultado da Consulta do Ponto Eletrônico</string>
     <string name="ckx_salvar_preferencia">Salvar em Preferências</string>
+    <string name="imagem_do_logo">Imagem do Logo</string>
 
 </resources>
