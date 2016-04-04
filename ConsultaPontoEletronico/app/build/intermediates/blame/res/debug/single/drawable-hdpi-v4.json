@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_search.png",
+        "source": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\src\\main\\res\\drawable-hdpi\\ic_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\logo_sefaz.jpg",
+        "source": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\src\\main\\res\\drawable-hdpi\\logo_sefaz.jpg"
+    }
+]
