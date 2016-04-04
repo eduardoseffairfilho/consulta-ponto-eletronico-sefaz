@@ -4,6 +4,14 @@
         "source": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\src\\main\\res\\menu\\activity_consulta_ponto.xml"
     },
     {
+        "merged": "C:\\Users\\P001111\\Documents\\GitHub\\consulta-ponto-eletronico-sefaz\\ConsultaPontoEletronico\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_resultado_consulta_ponto.xml",
+        "source": "C:\\Users\\P001111\\Documents\\GitHub\\consulta-ponto-eletronico-sefaz\\ConsultaPontoEletronico\\app\\src\\main\\res\\menu\\activity_resultado_consulta_ponto.xml"
+    },
+    {
+        "merged": "C:\\Users\\P001111\\Documents\\GitHub\\consulta-ponto-eletronico-sefaz\\ConsultaPontoEletronico\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_consulta_ponto.xml",
+        "source": "C:\\Users\\P001111\\Documents\\GitHub\\consulta-ponto-eletronico-sefaz\\ConsultaPontoEletronico\\app\\src\\main\\res\\menu\\activity_consulta_ponto.xml"
+    },
+    {
         "merged": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_resultado_consulta_ponto.xml",
         "source": "C:\\Users\\P001111\\Documents\\GitHub\\ConsultaPontoEletronico\\app\\src\\main\\res\\menu\\activity_resultado_consulta_ponto.xml"
     }
