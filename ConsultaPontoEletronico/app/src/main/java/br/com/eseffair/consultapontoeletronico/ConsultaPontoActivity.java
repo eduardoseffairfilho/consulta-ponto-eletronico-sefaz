@@ -50,7 +50,7 @@ public class ConsultaPontoActivity extends Activity {
 		etCpf = (EditText) findViewById(R.id.etCpf);
 		chxSalvPref = (CheckBox) findViewById(R.id.chxSalvPref);
 		
-		/** Carregar do arquivo de preferências os campos Matricula, Setor e Cpf. */
+		/** Carregar do arquivo de preferÃªncias os campos Matricula, Setor e Cpf. */
         carregarCamposDePreferencia();
         
         /** Executa a consulta. */
@@ -60,9 +60,9 @@ public class ConsultaPontoActivity extends Activity {
 				Spinner spMes = (Spinner) findViewById(R.id.spMes);
 				Spinner spAno = (Spinner) findViewById(R.id.spAno);
 				
-		    	/** Validação de Campos. */
+		    	/** ValidaÃ§Ã£o de Campos. */
 				if (validarCampos()) {
-					/** Salvar no arquivo de preferências os campos Matricula, Setor e Cpf. */
+					/** Salvar no arquivo de preferÃªncias os campos Matricula, Setor e Cpf. */
 					salvarCamposEmPreferencia();
 					
 					String matricula = etMatricula.getText().toString();
@@ -88,7 +88,8 @@ public class ConsultaPontoActivity extends Activity {
     }
 
 	protected ArrayAdapter<String> montaComboboxMes() {
-		final String[] meses = new DateFormatSymbols(new Locale("pt_BR")).getMonths();
+		Locale locale = new Locale("pt", "BR");
+		final String[] meses = new DateFormatSymbols(locale).getMonths();
 		final String[] mesesExibir = new String[12];
 		
 		int mesAtual = new GregorianCalendar().get(Calendar.MONTH);
@@ -107,8 +108,8 @@ public class ConsultaPontoActivity extends Activity {
 
 	protected ArrayAdapter<Integer> montaComboboxAno() {
 		final Integer[] anos = new Integer[10];
-		anos[0] = new GregorianCalendar().get(Calendar.YEAR); // o primeiro ano é o ano atual.
-		// os demais anos são anteriores ao ano atual.
+		anos[0] = new GregorianCalendar().get(Calendar.YEAR); // o primeiro ano Ã© o ano atual.
+		// os demais anos sÃ£o anteriores ao ano atual.
 		for (int i = 1; i < anos.length; i++) {
 			anos[i] = anos[i-1] - 1;
 		}
@@ -158,7 +159,7 @@ public class ConsultaPontoActivity extends Activity {
          } 
          
          if (salvarpref) {
-        	 Toast.makeText(ConsultaPontoActivity.this, "Carregando preferências salvas!", Toast.LENGTH_LONG).show();
+        	 Toast.makeText(ConsultaPontoActivity.this, "Carregando preferÃªncias salvas!", Toast.LENGTH_LONG).show();
          }
 	}
 
@@ -166,7 +167,7 @@ public class ConsultaPontoActivity extends Activity {
     	final Map<String,String> descrMes =  new HashMap<String, String>();
         descrMes.put("janeiro", "1");
         descrMes.put("fevereiro", "2");
-        descrMes.put("março", "3");
+        descrMes.put("marÃ§o", "3");
         descrMes.put("abril", "4");
         descrMes.put("maio", "5");
         descrMes.put("junho", "6");
@@ -180,20 +181,20 @@ public class ConsultaPontoActivity extends Activity {
     	return descrMes.get(mesSelecionado);
     }
     
-	/** Validação de Campos. */
+	/** ValidaÃ§Ã£o de Campos. */
     protected boolean validarCampos() {
     	boolean flag = true;
     	
 		if (etMatricula.getText() == null ||  etMatricula.getText().toString().equals("")) {
-			 etMatricula.setError("O campo Matrícula não foi informado!");
+			 etMatricula.setError("O campo MatrÃ­cula nÃ£o foi informado!");
 			 flag = false;
 		}
 		if (etSetor.getText() == null ||  etSetor.getText().toString().equals("")) {
-			etSetor.setError("O campo Setor não foi informado!");
+			etSetor.setError("O campo Setor nÃ£o foi informado!");
 			flag = false;
 		}
 		if (etCpf.getText() == null ||  etCpf.getText().toString().equals("")) {
-			etCpf.setError("O campo Senha não foi informado!");
+			etCpf.setError("O campo Senha nÃ£o foi informado!");
 			flag = false;
 		}
 		
