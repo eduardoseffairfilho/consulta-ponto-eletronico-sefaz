@@ -95,9 +95,9 @@ public class ConsultaPontoActivity extends Activity {
 		int mesAtual = new GregorianCalendar().get(Calendar.MONTH);
 		for (int i = 0; i < mesesExibir.length; i++) {
 			if (mesAtual+i >= mesesExibir.length) {
-				mesesExibir[i] = meses[mesAtual+i - mesesExibir.length];
+				mesesExibir[i] = meses[mesAtual+i - mesesExibir.length].toUpperCase();
 			} else {
-				mesesExibir[i] = meses[mesAtual+i];
+				mesesExibir[i] = meses[mesAtual+i].toUpperCase();
 			}
 		}
 		
@@ -165,6 +165,7 @@ public class ConsultaPontoActivity extends Activity {
 
 	protected String getSescrMes(String mesSelecionado) {
     	final Map<String,String> descrMes =  new HashMap<String, String>();
+		mesSelecionado = mesSelecionado.toLowerCase();
         descrMes.put("janeiro", "1");
         descrMes.put("fevereiro", "2");
         descrMes.put("março", "3");
